@@ -11,9 +11,9 @@ public class MainApplication {
         System.out.println("3 задание:");
         selectColor(21);
         System.out.println("4 задание:");
-        compareNumbers(89,78);
+        compareNumbers(89, 78);
         System.out.println("5 задание:");
-        addOrSubtractAndPrint (3,4,false);
+        addOrSubtractAndPrint(3, 4, true);
     }
 
     public static void greetings() {
@@ -46,8 +46,9 @@ public class MainApplication {
             System.out.println("Зеленый");
         }
     }
+
     public static void compareNumbers(int a, int b) {
-        if (a>=b) {
+        if (a >= b) {
             System.out.println("a>=b");
         } else {
             System.out.println("a<b");
@@ -55,14 +56,13 @@ public class MainApplication {
     }
 
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
-        if (increment == true) {
+        if (increment) {
             int resul = initValue + delta;
-                System.out.println("результат:" + resul);
-            }
-            else {
-                int resul = initValue - delta;
-                    System.out.println("результат:" + resul);
-                }
+            System.out.println("результат:" + resul);
+        } else {
+            int resul = initValue - delta;
+            System.out.println("результат:" + resul);
+        }
     }
 }
 
