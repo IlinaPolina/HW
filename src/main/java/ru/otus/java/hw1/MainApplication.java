@@ -1,6 +1,4 @@
-package HW1;
-
-import java.util.Scanner;
+package ru.otus.java.hw1;
 
 public class MainApplication {
     public static void main(String[] args) {
