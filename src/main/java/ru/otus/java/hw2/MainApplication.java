@@ -1,6 +1,5 @@
 package ru.otus.java.hw2;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MainApplication {
@@ -17,7 +16,7 @@ public class MainApplication {
         System.out.println("Задание 2");
         sumArr(new int[]{6, 8, 9, 7, 6, 4, 3, 1, 2, 6});
         System.out.println("Задание 3");
-        arrNumbers(new int[]{}, 5);
+        arrNumbers(new int[] {1, 6, 8}, 5);
         System.out.println("Задание 4");
         arrPlus(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
         System.out.println("Задание 5");
@@ -37,7 +36,7 @@ public class MainApplication {
 
     }
 
-    public static void arrNumbers(int[] arr, int number) {
+    public static void arrNumbers(int arr[], int number) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = 7;
         }
@@ -56,15 +55,21 @@ public class MainApplication {
     }
 
     public static void arrPastSum(int[] arr) {
-        int sum = 0;
+        int sumLeft = 0;
+        int sumRight = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i < arr.length / 2) {
-                sum += arr[i];
+                sumLeft += arr[i];
             } else {
-                sum += arr[i];
+                sumRight += arr[i];
             }
         }
-        System.out.println(sum + " = " + "Суммa половины с большей суммой");
+        if (sumLeft > sumRight) {
+            System.out.println("Сумма больше половины:" + " " + sumLeft + " - " + "Суммa первой половины");
+        } else {
+            System.out.println("Сумма больше половины:" + " " + sumRight + " - " + "Суммa второй половины");
+        }
+
     }
 
 }
