@@ -16,7 +16,7 @@ public class MainApplication {
         System.out.println("Задание 2");
         sumArr(new int[]{6, 8, 9, 7, 6, 4, 3, 1, 2, 6});
         System.out.println("Задание 3");
-        arrNumbers(new int[] {1, 6, 8}, 5);
+        arrNumbers(new int[]{1, 2, 3}, 5);
         System.out.println("Задание 4");
         arrPlus(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
         System.out.println("Задание 5");
