@@ -11,7 +11,11 @@ public class MainAplication {
         //squareOfStars();
         squareOfStars2(4, 4);
         System.out.println("Задание 3");
-        zeroDiagonals();
+        zeroDiagonals(new int[][]{{6, 8, 9, 6, 7, 3}, {9, 9, 9, 9, 9, 9}, {9, 7, 9, 8, 8, 8}, {9, 7, 9, 8, 8, 8}, {9, 7, 9, 8, 8, 8}, {9, 7, 9, 8, 8, 8}});
+        System.out.println("Задание 4");
+        findMax(new int[][]{{6, 8, 9, 7, 6, 4, 3, 1, 2, 123}, {9, 0, 9, 0, 9, 7, 4, 5, 777}});
+        System.out.println("Задание 5");
+        sumOfSecondLine(new int[][]{{6, 9, 7}, {9, 1, 1}, {7, 5, 6}});
     }
 
 
@@ -44,16 +48,37 @@ public class MainAplication {
         }
     }
 
-    private static void zeroDiagonals() {
-        int [][] array2d = new int [6][6];
+    private static void zeroDiagonals(int array2d[][]) {
         for (int i = 0; i < array2d.length; i++) {
             for (int j = 0; j < array2d[i].length; j++) {
                 if (i == j) {
-                    array2d[i][j] = 7;
+                    array2d[i][j] = 0;
                 }
-                System.out.println(array2d[i][j] + "");
+                System.out.print(array2d[i][j] + " ");
             }
+            System.out.println();
         }
-        System.out.println();
+    }
+
+    private static void findMax(int[][] array2d) {
+        int max = array2d[0][0];
+        for (int i = 0; i < array2d.length; i++) {
+            for (int j = 0; j < array2d[i].length; j++) {
+                if (array2d[i][j] > max) ;
+                max = array2d[i][j];
+            }
+            System.out.println(max);
+        }
+    }
+
+    private static void sumOfSecondLine(int[][] array2d) {
+        int sum = 0;
+        int lineNumber = 1;
+        for (int i = 0; i < array2d.length; i++)
+            sum+=array2d[lineNumber][i];{
+            for (int j = 0; j < array2d[0].length; j++) {
+            }
+            System.out.println(sum);
+        }
     }
 }
