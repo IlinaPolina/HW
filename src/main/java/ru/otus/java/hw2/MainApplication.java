@@ -18,7 +18,7 @@ public class MainApplication {
         System.out.println("Задание 3");
         arrNumbers(new int[]{2, 2, 2, 2, 2}, 9);
         System.out.println("Задание 4");
-        arrPlus(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        arrPlus(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 7);
         System.out.println("Задание 5");
         arrPastSum(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
 
@@ -43,9 +43,9 @@ public class MainApplication {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void arrPlus(int[] arr) {
+    public static void arrPlus(int[] arr, int number) {
         for (int i = 0; i < arr.length; i++) {
-            arr[i] += 3;
+            arr[i] += number;
         }
         System.out.println(Arrays.toString(arr));
     }
